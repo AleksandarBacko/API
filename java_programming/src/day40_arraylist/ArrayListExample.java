@@ -14,5 +14,6 @@ public class ArrayListExample {
 
         list1.remove(1);
         System.out.println(list1);
+
     }
 }
