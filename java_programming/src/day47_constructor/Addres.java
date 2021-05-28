@@ -7,6 +7,14 @@ public class Addres {
     private String zipCode;
     private String country="USA";
 
+
+    public Addres() {
+        System.out.println("Addres constructor");
+    }
+
+
+
+
     public String getStreet() {
         return street;
     }
