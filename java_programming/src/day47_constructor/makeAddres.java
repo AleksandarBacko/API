@@ -9,6 +9,7 @@ public class makeAddres {
         moja.setZipCode("93110");
         moja.setCountry("USA");
         System.out.println(moja.toString());
+        System.out.println(moja.getCity());
 
     }
 }
