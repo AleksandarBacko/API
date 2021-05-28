@@ -12,5 +12,6 @@ public class makeAddres {
         System.out.println(moja.getCity());
 
 
+
     }
 }
