@@ -60,6 +60,24 @@ public class ScrumTeam {
         this.allDevelopers.addAll(Arrays.asList(developer));
     }
 
+
+    public boolean removeTester(int employeeId){
+        for (int i = 0; i < allTesters.size(); i++) {
+            if (allTesters.get(i).getEmployeeID() ==employeeId){
+                allTesters.remove(allTesters.get(i));
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public boolean removeDeveloper(int employeeId){
+        int size=allDevelopers.size();
+       allDevelopers.removeIf(eachDev -> eachDev.getEmployeeId()==employeeId);
+       return size != allDevelopers.size();
+    }
+
     public static void main(String[] args) {
         ScrumTeam scrumTeam = new ScrumTeam("Ziba", "John", "Fikret");
         System.out.println(scrumTeam.allTesters);
