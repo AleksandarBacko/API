@@ -8,7 +8,7 @@ public class Gmail extends Email{
         domain="Gmail";
     }
 
-    
+
     public Gmail(String address,int numberOfEmails){
         super(address,numberOfEmails);
     }
