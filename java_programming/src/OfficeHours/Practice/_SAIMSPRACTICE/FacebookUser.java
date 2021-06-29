@@ -26,6 +26,8 @@ public class FacebookUser extends SocialMedia implements hasGroups {
     }
 
     public FacebookUser(String username, String password, String fullName, int age, int numberOfFriends){
+        this.username=username;
+
         if(age>0&&(numberOfFriends>0&&numberOfFriends<5000)){
             this.age=age;
             this.numberOfFriends=numberOfFriends;
@@ -54,6 +56,7 @@ public class FacebookUser extends SocialMedia implements hasGroups {
 
 
     public FacebookUser(String username,String password,String fullName){
+        this.username=username;
         if(password.contains(username)){
             setPassword("tryagainpassword");
             System.out.println("Password contained username. Default password created: "+getPassword());
@@ -73,6 +76,7 @@ public class FacebookUser extends SocialMedia implements hasGroups {
     }
 
     public FacebookUser(String username, String password) {
+        this.username=username;
         if(password.contains(username)){
             setPassword("tryagainpassword");
             System.out.println("Password contained username. Default password created: "+getPassword());
@@ -102,7 +106,6 @@ public class FacebookUser extends SocialMedia implements hasGroups {
 
     @Override
     public void notifications() {
-        super.notifications();
         int currentHourTime = LocalTime.now().getHour();
 
         if (currentHourTime >= 8 && currentHourTime <= 17) {
