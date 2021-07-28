@@ -1,5 +1,5 @@
 Feature: NextBaseCrm login page
-@wip
+
   Scenario: Login functionality on nextBaseCrm
     Given User is on nextBasecrm Login page
     When User enter correct email
